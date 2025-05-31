@@ -3,6 +3,7 @@ import numpy as np
 from tensorflow.keras.models import load_model
 from PIL import Image
 import io
+import os
 
 app = Flask(__name__)
 model = load_model('model/mobilenetv2_klasifikasi.h5')
@@ -34,4 +35,5 @@ def predict():
         return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5002)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(debug=False, host='0.0.0.0', port=port)
