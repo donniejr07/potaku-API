@@ -33,9 +33,5 @@ def predict():
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
-@app.route('/')
-def home():
-    return 'Image Classification API is running!'
-
 if __name__ == '__main__':
     app.run(debug=True, port=5002)
