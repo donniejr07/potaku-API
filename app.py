@@ -30,6 +30,10 @@ def predict():
         preds = model.predict(processed_image)
         class_idx = np.argmax(preds[0])
         result = LABELS[class_idx] if class_idx < len(LABELS) else str(class_idx)
-        return jsonify({'class': result, 'confidence': float(np.max(preds[0]))})
+        confidence_percent = round(float(np.max(preds[0])) * 100, 2)
+        return jsonify({'class': result, 'confidence': confidence_percent})
     except Exception as e:
         return jsonify({'error': str(e)}), 500
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5001)
