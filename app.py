@@ -3,10 +3,9 @@ import numpy as np
 from tensorflow.keras.models import load_model
 from PIL import Image
 import io
-import os
 
 app = Flask(__name__)
-model = load_model('model/mobilenetv2_klasifikasi.h5')
+model = load_model('model/PotaKu_model.h5')
 
 LABELS = ['Potato Early blight', 'Potato Late blight', 'Potato healthy']
 
