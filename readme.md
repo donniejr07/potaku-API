@@ -39,6 +39,12 @@ API ini dapat mendeteksi 3 kondisi pada tanaman kentang:
 - **Input Size**: 224x224 pixels
 - **Color Mode**: RGB
 
+## 👨‍💻 Developer
+
+- **Nama**: [Doni Julyano Risdianto]
+- **Email**: [julyanorisdianto@gmail.com]
+- **GitHub**: [@donniejr07](https://github.com/donniejr07)
+
 <div align="center">
   <p>© 2025 PotaKu API. All rights reserved.</p>
 </div>
