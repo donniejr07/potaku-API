@@ -5,7 +5,7 @@ from PIL import Image
 import io
 
 app = Flask(__name__)
-model = load_model('model/PotaKu_model.h5')
+model = load_model('model/PotaKu_model.keras')
 
 LABELS = ['Potato Early blight', 'Potato Late blight', 'Potato healthy']
 
